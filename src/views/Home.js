@@ -1,11 +1,21 @@
 import * as React from 'react';
 import menu from '../components/assets/menu.png'
 import logo from '../components/assets/logo_vida_sana.jpg'
-import { Link } from "react-router-dom"
+import { Link, useNavigate, Navigate } from "react-router-dom"
+import { isUserLoggedIn } from '../components/utility/Util'
 
 const Home = () => {
 
-   
+    const navigate = useNavigate();
+
+    const cerrarSesion = () => {
+        localStorage.clear()
+        navigate('/login')
+    }
+
+    const userLoggedIn = isUserLoggedIn()
+
+    if (userLoggedIn){
         return (
             <>
                 <div className='header-main'>
@@ -16,6 +26,9 @@ const Home = () => {
                             <img src={menu} className='menu-icono'/>
                         </label>
                         <nav className='navbar'>
+                            <ul>
+                                <li className=''><span onClick={() => cerrarSesion()}>CERRAR SESIÓN</span></li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
@@ -41,7 +54,10 @@ const Home = () => {
                 </div>
             </>
         )
-  
+    }else{
+        return (<Navigate to="/login" />)
+    }
+    
 }
 
 export default Home
