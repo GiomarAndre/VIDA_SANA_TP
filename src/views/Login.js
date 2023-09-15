@@ -89,21 +89,21 @@ const Login = () =>{
                     <div className="tittle">Iniciar sesión</div>
                     <div className="underline"></div>
                 </div>
-                <h3>DIRECCIÓN DE CORREO ELECTRÓNICO</h3>
+                <h3>USUARIO:</h3>
                     <div className="inputs">
                         <div className="input">
                             <input
                                 type="text" 
-                                placeholder="Introduce tu Correo Electrónico" 
+                                placeholder="Introduce tu usuario" 
                                 value={email}
                                 onChange={(event) => setEmail(event.target.value)} 
                             ></input>
                         </div>
-                        <h3>CONTRASEÑA</h3>
+                        <h3>CONTRASEÑA:</h3>
                         <div className="input">
                             <input 
                                 type="password" 
-                                placeholder="Introduce una contraseña segura"
+                                placeholder="Introduce una contraseña"
                                 value={password}
                                 onChange={(event) => setPassword(event.target.value)}
                                 id="login-password"
