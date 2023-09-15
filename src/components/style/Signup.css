@@ -24,11 +24,18 @@
 }
 
 .container-img{
+    height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     width: 30%;
-    min-width: 735px;
-    /* min-width: 800px; */
+    min-width: 50%;
+    overflow: hidden;
+}
+.container-img img {
+    width: 100%; /* 100% del ancho del contenedor */
+    height: 100%; /* 100% del alto del contenedor */
+    object-fit: cover; /* Ajustar la imagen al tamaño del contenedor */
 }
 
 .header-login{
@@ -45,36 +52,26 @@
     font-weight: 700;   
 }
 
-.underline{
-    width: 61px;
-    height: 6px;
-    background: var(--main-green);
-    border-radius: 9px;
-}
-
 .inputs{
-    margin-top: 55px;
+    margin-top: 6px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1px;
 }
-
+h3{
+    margin-left: 22.5%;
+}
 .input{
     display: flex;
     align-items: center;
     margin: auto;
     width: 480px;
-    height: 80px;
-    background: #EAEAEA;
-    border-radius: 6px;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
 }
 
 .input ::placeholder{
     font-family: 'Poppins';
-}
-
-.input img{
-    margin: 0px 30px;
 }
 
 .input input{
@@ -86,6 +83,7 @@
     color: #797979;
     font-size: 19px;
     font-family: 'Poppins';
+    margin-left: 11%;
 }
 
 .forgot-password{
