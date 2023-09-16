@@ -47,8 +47,7 @@ const Home = () => {
                     <div className='container'>
                         <h1>¡Hola admin!</h1>
                         <div className='msg-principal'>
-                            <p>¡Bienvenido a Vida Sana, tu compañero en el camino hacia un estilo de vida más saludable! 
-                                Aquí encontrarás herramientas, consejos y motivación para lograr tus metas de bienestar. ¡Comencemos juntos este emocionante viaje hacia una vida más saludable y activa</p>
+                            <p>¡Bienvenidos a Vida Sana, tu compañero en el camino hacia tu estilo de vida más saludable! Aquí encontraras herramientas, consejos y motivación para lograr tus metas de bienestar. ¡Comencemos juntos este emocionante viaje hacia una vida más saludable y activa donde nuestra meta será lograr tener una mejor calidad de vida!</p>
                         </div>
                     </div>
                 </div>
