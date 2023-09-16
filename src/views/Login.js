@@ -39,11 +39,11 @@ const Login = () =>{
             onFailure: (error) => {
                 setVisibleMsgError(true);           
                 if(error.message == "User does not exist."){
-                    setMsgError("Este usuario no se encuentra registrado");
+                    setMsgError("Este usuario no se encuentra registrado, inténtalo de nuevo");
                 }else if(error.message == "Incorrect username or password."){
-                    setMsgError("Contraseña incorrecta.");
+                    setMsgError("Contraseña incorrecta, intentalo de nuevo");
                 }else if(error.message == "Missing required parameter USERNAME"){
-                    setMsgError("Debe ingresar el usuario");
+                    setMsgError("Debe ingresar el usuario y/o contraseña");
                 }else{
                     setMsgError("Ocurrió un error al iniciar sesión");
                 }
@@ -89,7 +89,7 @@ const Login = () =>{
                     <div className="tittle">Iniciar sesión</div>
                     <div className="underline"></div>
                 </div>
-                <h3>USUARIO:</h3>
+                <h3>USUARIO</h3>
                     <div className="inputs">
                         <div className="input">
                             <input
@@ -99,11 +99,11 @@ const Login = () =>{
                                 onChange={(event) => setEmail(event.target.value)} 
                             ></input>
                         </div>
-                        <h3>CONTRASEÑA:</h3>
+                        <h3>CONTRASEÑA</h3>
                         <div className="input">
                             <input 
                                 type="password" 
-                                placeholder="Introduce una contraseña"
+                                placeholder="Introduce tu contraseña"
                                 value={password}
                                 onChange={(event) => setPassword(event.target.value)}
                                 id="login-password"
