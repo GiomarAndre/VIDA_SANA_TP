@@ -64,7 +64,7 @@ const Login = () =>{
                       }
                       logins_aws.Logins[`cognito-idp.${region_aws}.amazonaws.com/2iidbtpg00cku2n329hiba9k2d`] = result.getIdToken().getJwtToken()
                       AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-                        IdentityPoolId: "us-east-1_OJo9kXGfp",
+                        IdentityPoolId: "us-east-1_jtK9i7dIN",
                         Logins: logins_aws.Logins
                       })
                       localStorage.setItem('userData', result.getAccessToken())
